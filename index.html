@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signed/Unsigned Converter</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, select, button { margin: 5px 0; display: block; }
+  </style>
+</head>
+<body>
+  <h2>Konwertowanie numeru seryjnego</h2>
+  <label for="value">Wpisz numer seryjny urządzenia:</label>
+  <input type="number" id="value" />
+  
+  <label for="bits">Bits (8, 16, 32):</label>
+  <select id="bits">
+    <option value="8">8</option>
+    <option value="16">16</option>
+    <option value="32" selected>32</option>
+  </select>
+  
+  <button onclick="convert()">Konwertuj</button>
+  
+  <h3>Wynik:</h3>
+  <p><strong>Unsigned:</strong> <span id="unsigned"></span></p>
+  <p><strong>Signed:</strong> <span id="signed"></span></p>
+
+  <script>
+    function convert() {
+      const value = Number(document.getElementById('value').value);
+      const bits = Number(document.getElementById('bits').value);
+      const max = 2 ** bits;
+
+      // Ensure within bounds
+      const normalized = ((value % max) + max) % max;
+
+      let signed;
+      if (normalized >= max / 2) {
+        signed = normalized - max;
+      } else {
+        signed = normalized;
+      }
+
+      document.getElementById('unsigned').innerText = normalized;
+      document.getElementById('signed').innerText = signed;
+    }
+  </script>
+</body>
+</html>
