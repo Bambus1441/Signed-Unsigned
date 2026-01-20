@@ -1,0 +1,197 @@
+{
+  "services": [
+    {
+      "id": "realdebrid",
+      "enabled": true,
+      "credentials": {
+        "apiKey": "TURI3E4DNHNDVNROHBJLKUZ5QOYWBAREDHBXVSBZP3KB6QO4WXYQ"
+      }
+    },
+    {
+      "id": "alldebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "premiumize",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debridlink",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "torbox",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "stremio_nntp",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "nzbdav",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "altmount",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "offcloud",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "putio",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easynews",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "easydebrid",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "debrider",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "pikpak",
+      "enabled": false,
+      "credentials": {}
+    },
+    {
+      "id": "seedr",
+      "enabled": false,
+      "credentials": {}
+    }
+  ],
+  "presets": [],
+  "formatter": {
+    "id": "gdrive"
+  },
+  "preferredQualities": [
+    "BluRay REMUX",
+    "BluRay",
+    "WEB-DL",
+    "WEBRip",
+    "HDRip",
+    "HC HD-Rip",
+    "DVDRip",
+    "HDTV",
+    "CAM",
+    "TS",
+    "TC",
+    "SCR",
+    "Unknown"
+  ],
+  "preferredResolutions": [
+    "2160p",
+    "1440p",
+    "1080p",
+    "720p",
+    "576p"
+  ],
+  "excludedQualities": [
+    "CAM",
+    "SCR",
+    "TS",
+    "TC"
+  ],
+  "excludedVisualTags": [
+    "3D"
+  ],
+  "sortCriteria": {
+    "global": [
+      {
+        "key": "cached",
+        "direction": "desc"
+      },
+      {
+        "key": "resolution",
+        "direction": "desc"
+      },
+      {
+        "key": "library",
+        "direction": "desc"
+      },
+      {
+        "key": "regexPatterns",
+        "direction": "desc"
+      },
+      {
+        "key": "streamType",
+        "direction": "desc"
+      },
+      {
+        "key": "visualTag",
+        "direction": "desc"
+      },
+      {
+        "key": "audioTag",
+        "direction": "desc"
+      },
+      {
+        "key": "audioChannel",
+        "direction": "desc"
+      },
+      {
+        "key": "encode",
+        "direction": "desc"
+      },
+      {
+        "key": "language",
+        "direction": "desc"
+      },
+      {
+        "key": "size",
+        "direction": "desc"
+      }
+    ]
+  },
+  "posterService": "rpdb",
+  "deduplicator": {
+    "enabled": true,
+    "keys": [
+      "filename",
+      "infoHash"
+    ],
+    "multiGroupBehaviour": "aggressive",
+    "cached": "single_result",
+    "uncached": "per_service",
+    "p2p": "single_result"
+  },
+  "proxy": {
+    "id": "builtin",
+    "proxiedServices": []
+  },
+  "preferredEncodes": [],
+  "preferredStreamTypes": [],
+  "preferredVisualTags": [],
+  "preferredAudioTags": [],
+  "excludedResolutions": [],
+  "excludedLanguages": [],
+  "preferredLanguages": [
+    "Polish"
+  ],
+  "seederRangeTypes": [],
+  "ageRangeTypes": [
+    "usenet"
+  ],
+  "digitalReleaseFilter": {
+    "requestTypes": [],
+    "addons": []
+  }
+}
